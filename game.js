@@ -70,12 +70,12 @@ function handleSlotClick(event) {
     markCorrectSequence();
     isGameActive = false;
     startButton.disabled = false;
-    window.cefQuery({
+    let cmd = 'tellraw @a "1"';
+    queryMinecraftCommand(cmd)
+        window.cefQuery({
         request:"closeGUI",
         persistent:false
     })
-    let cmd = 'tellraw @a "1"';
-    queryMinecraftCommand(cmd)
   }
 }
 
