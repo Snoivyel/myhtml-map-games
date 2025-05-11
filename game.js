@@ -67,6 +67,7 @@ function handleSlotClick(event) {
   // 如果用户顺序完成
   if (userSequence.length === lockSequence.length) {
     statusText.textContent = '解锁成功！';
+    showSuccessMessage();
     markCorrectSequence();
     isGameActive = false;
     startButton.disabled = false;
@@ -101,6 +102,16 @@ function resetGame() {
   userSequence = [];
   //isGameActive = false;
   //startButton.disabled = false;
+}
+
+// 显示解锁成功后的自定义消息
+function showSuccessMessage() {
+  const successMessage = document.createElement('p');
+  successMessage.textContent = '宝贝真厉害！'; // 这里是你想显示的文字
+  successMessage.style.fontSize = '20px';
+  successMessage.style.fontWeight = 'bold'; 
+  successMessage.style.color = '#4CAF50';  // 绿色文本
+  lockContainer.appendChild(successMessage);  // 将消息添加到锁容器中
 }
 
 startButton.addEventListener('click', startGame);
