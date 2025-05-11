@@ -1,0 +1,29 @@
+<!-- success.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>解锁成功</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1 id="success-message"></h1>
+    <button onclick="goBack()">返回游戏</button>
+  </div>
+
+  <script>
+    // 从 URL 或 localStorage 获取信息
+    window.onload = function() {
+      const successMessage = localStorage.getItem('successMessage');
+      document.getElementById('success-message').textContent = successMessage || '恭喜解锁成功！';
+    };
+
+    // 返回游戏按钮
+    function goBack() {
+      window.location.href = 'index.html'; // 返回到原来的游戏页面
+    }
+  </script>
+</body>
+</html>
