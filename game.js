@@ -30,6 +30,9 @@ function generateRandomSequence() {
   lockSequence = [];
   for (let i = 0; i < 5; i++) {
     const randomSlot = Math.floor(Math.random() * 5);  // 随机生成0-4的数字
+    while(lockSequence.includes(randomSlot)){
+        randomSlot = Math.floor(Math.random() * 5); // 确保不重复
+    }
     lockSequence.push(randomSlot);
   }
   console.log('随机顺序:', lockSequence); // 可以用来调试
@@ -80,10 +83,10 @@ function markCorrectSequence() {
 // 重置游戏
 function resetGame() {
   lockButtons.forEach(button => button.classList.remove('active'));
-  lockSequence = [];
+  //lockSequence = [];
   userSequence = [];
-  isGameActive = false;
-  startButton.disabled = false;
+  //isGameActive = false;
+  //startButton.disabled = false;
 }
 
 startButton.addEventListener('click', startGame);
