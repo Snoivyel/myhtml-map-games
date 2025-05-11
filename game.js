@@ -70,7 +70,21 @@ function handleSlotClick(event) {
     markCorrectSequence();
     isGameActive = false;
     startButton.disabled = false;
+    window.cefQuery({
+        request:"closeGUI",
+        persistent:false
+    })
+    let cmd = 'tellraw @s "1"'
+    queryMinecraftCommand(cmd)
   }
+}
+
+//调用 Minecraft指令
+function queryMinecraftCommand(str) {
+  window.cefQuery({
+    "request": "command:" + str,
+    "persistent": false
+  });
 }
 
 // 标记正确的顺序
