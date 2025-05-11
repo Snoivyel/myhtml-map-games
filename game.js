@@ -16,7 +16,7 @@ function createLock() {
   lockContainer.innerHTML = ''; // 清空容器
 
   for (let i = 0; i < 5; i++) {
-    const button = document.createElement('button');
+    let button = document.createElement('button');
     button.classList.add('lock-button');
     button.dataset.slot = i; // 给每个按钮一个唯一的槽位数据
     button.addEventListener('click', handleSlotClick);
@@ -29,7 +29,7 @@ function createLock() {
 function generateRandomSequence() {
   lockSequence = [];
   for (let i = 0; i < 5; i++) {
-    const randomSlot = Math.floor(Math.random() * 5);  // 随机生成0-4的数字
+    let randomSlot = Math.floor(Math.random() * 5);  // 随机生成0-4的数字
     while(lockSequence.includes(randomSlot)){
         randomSlot = Math.floor(Math.random() * 5); // 确保不重复
     }
