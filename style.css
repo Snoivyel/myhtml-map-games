@@ -1,0 +1,51 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f3f3f3;
+}
+
+.game-container {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.lock-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.lock-button {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lock-button.active {
+  background-color: #4CAF50;
+}
+
+.lock-button.correct {
+  background-color: #8BC34A;
+}
+
+.lock-button.incorrect {
+  background-color: #F44336;
+}

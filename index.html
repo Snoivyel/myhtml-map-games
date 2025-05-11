@@ -1,33 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        .content {
-            padding: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>开锁小游戏</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Static Website</h1>
-    </header>
-    <div class="content">
-        <p>This is a simple static website hosted on Netlify.</p>
+  <div class="game-container">
+    <button id="start-btn">开始游戏</button>
+    <div id="lock" class="lock-container">
+      <!-- 这里的按钮会动态生成 -->
     </div>
+    <p id="status"></p>
+  </div>
+  <script src="game.js"></script>
 </body>
 </html>
