@@ -107,7 +107,7 @@ function resetGame() {
 // 显示解锁成功后的自定义消息
 function goToSuccessPage() {
   // 将自定义成功信息存储到 localStorage
-  localStorage.setItem('successMessage', '宝贝真厉害！'); // 设置你想要显示的消息
+  localStorage.setItem('successMessage', '你已成功解锁'); // 设置你想要显示的消息
   // 跳转到 success.html 页面
   window.location.href = 'success.html';
 }
