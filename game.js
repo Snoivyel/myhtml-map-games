@@ -74,7 +74,7 @@ function handleSlotClick(event) {
         request:"closeGUI",
         persistent:false
     })
-    let cmd = 'tellraw @a "1"'
+    let cmd = 'tellraw @a "1"';
     queryMinecraftCommand(cmd)
   }
 }
